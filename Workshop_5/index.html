@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titulo</title>
+    <style>
+        * {
+            border-radius: 13px;
+            list-style: none;
+        }
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-items: start;
+            background-color: yellow;
+            height: 100px;
+            width: 1050px;
+            margin-bottom: 10px;
+        }
+
+        .main_div {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .div_1 {
+            display: flex;
+            justify-items: start;
+            background-color: orange;
+            margin: 10px;
+            width: 200px;
+            height: 85px ;
+        }
+
+        .ul_1 {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cmbb {
+            display: none;
+        }
+
+        .ul_2 {
+            display: flex;
+            flex-direction: row;
+            margin: 7px;
+        }
+        
+        .div_2 {
+            display: flex;
+            background-color: blue;
+            flex-direction: column;
+            justify-content: start;
+            margin: 10px;
+            width: 400px;
+            height: 170px ;
+            color: white;
+        }
+
+        .div_3 {
+            display: flex;
+            background-color: blue;
+            flex-direction: column;
+            justify-content: space-between;
+            margin: 10px;
+            width: 400px;
+            height: 100px ;
+            color: white;
+        }
+
+        footer {
+            background-color: rgb(250, 187, 187);
+            width: 1050px;
+            height: 45px;
+        }
+
+        .main_body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        p {
+            margin: 0px;
+        }
+
+        h3 {
+            margin-left: 10px;
+        }
+
+        @media(max-width:601px) {
+            header {
+                width: 570px;
+                height: 120px;
+            }
+            
+            .main_div {
+                flex-direction: column;
+                width: 570px;
+            }
+            .cmbb {
+                display: flex;
+                height: 20px;
+            }
+            .ul_1 {
+                display: none;
+            }
+
+            .div_1 {
+                width: 570px;
+                height: 30px;
+                align-items: center;
+                margin-left: 0px;
+            }
+
+            .div_2 {
+                width: 570px;
+                margin-left: 0px;
+            }
+
+            .div_3 {
+                width: 570px;
+                margin-left: 0px;
+            }
+
+
+            footer {
+                width: 570px;
+            }
+        }
+    </style>
+
+</head>
+
+<body class="main_body">
+    <header>
+        <h1 style="margin: 0px;">Responsive Design</h1>
+        <h2>The best thing in the world after the invention of the web</h2>
+    </header>
+    <div class="main_div">
+        <div class="div_1">
+            <ul class="ul_1">
+                <li><a href="www.google.com">Home</a></li>
+                <li><a href="www.google.com">Turials</a></li>
+                <li><a href="www.google.com">Examples</a></li>
+            </ul>
+            <form class="cmbb">
+                <select>
+                    <option value="0">Home</option>
+                    <option value="1">Tutorial</option>
+                    <option value="2">Examples</option>
+                </select>
+            </form>
+        </div>
+        <div class="div_2">
+            <h3>New responsive design examples</h3>
+            <ul class="ul_2">
+                <li>Blah</li>
+                <li>blah</li>
+                <li>blah</li>
+            </ul>
+            <ul class="ul_2">
+                <li>Blah</li>
+                <li>blah</li>
+                <li>blah</li>
+            </ul>
+            <ul class="ul_2">
+                <li>Blah</li>
+                <li>blah</li>
+                <li>blah</li>
+            </ul>
+        </div>
+        <div>
+            <div class="div_3">
+                <h3>New tutorial</h3>
+                <ul class="ul_2">
+                    <li>Blah</li>
+                    <li>blah</li>
+                    <li>blah</li>
+                </ul>
+            </div>
+            <div class="div_3" style="height: 150px">
+                <h3>New tools</h3>
+                <ul class="ul_2">
+                    <li>Blah</li>
+                    <li>blah</li>
+                    <li>blah</li>
+                </ul>
+                <ul class="ul_2">
+                    <li>Blah</li>
+                    <li>blah</li>
+                    <li>blah</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p><b>Copyright &#169; 2012 Sergio Luján Mora</b></p>
+        <p><b>Email: <a href="www.google.com">sergio.lujan@ua.us</a> Twitter: <a href="www.google.com">@sergiolujanmora</a></b></p>
+    </footer>
+</body>
+
+</html>
