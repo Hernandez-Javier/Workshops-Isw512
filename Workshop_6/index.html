@@ -6,13 +6,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Titulo</title>
+
+    <script>
+        function save_localStorage() {
+            var user = {
+                name : document.getElementById('name').value,
+                last_name : document.getElementById('last_name').value,
+                number : document.getElementById('number').value
+            }
+
+            if(localStorage.getItem('users') == null) {
+                localStorage.setItem('users', '[]');
+            }
+
+            var old_data = JSON.parse (localStorage.getItem('users'));
+            old_data.push(user);
+
+            localStorage.setItem ("users", JSON.stringify(old_data));
+        }
+
+        function clear_fields() {
+			document.getElementById('name').value = "";
+			document.getElementById('last_name').value = "";
+			document.getElementById('number').value = "";
+        }
+
+        function main() {
+            save_localStorage();
+            clear_fields();
+        }
+    </script>
 </head>
 
 <body>
-    <input class="input_register" type="text" placeholder="Nombre">
-    <input class="input_register" type="text" placeholder="Apellido">
-    <input class="input_register" type="text" placeholder="N Telefono">
-    <button >Agregar</button>
+    <input id="name" type="text" placeholder="Nombre">
+    <input id="last_name" type="text" placeholder="Apellido">
+    <input id="number" type="text" placeholder="N Telefono">
+    <button class="btn" onclick="main()">Agregar</button>
 </body>
 
 </html>
