@@ -9,7 +9,7 @@
 
     <script>
         function save_localStorage() {
-            var user = {
+            let user = {
                 name : document.getElementById('name').value,
                 last_name : document.getElementById('last_name').value,
                 number : document.getElementById('number').value
@@ -19,7 +19,7 @@
                 localStorage.setItem('users', '[]');
             }
 
-            var old_data = JSON.parse (localStorage.getItem('users'));
+            let old_data = JSON.parse (localStorage.getItem('users'));
             old_data.push(user);
 
             localStorage.setItem ("users", JSON.stringify(old_data));
